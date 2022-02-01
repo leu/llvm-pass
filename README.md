@@ -1,6 +1,9 @@
 # Description
 prints out the number of functions and basic blocks in a given program on stderr, and prints a histogram of the number of instructions in a basic block.
 
+# Building
+Copy the 'FuncBlocCounter' folder found at this repository's root into your LLVM source tree's llvm/lib/Transforms directory. In the same directory, edit the CMakeLists.txt by adding the line: `add_subdirectory(FuncBlocCounter)`. Now go to this repository's root, and run `mkdir build && cd build && cmake [LLVM_ROOT/llvm]`, replacing [LLVM_ROOT/llvm] with your LLVM source tree's llvm folder. In the new build folder, `cd lib/Transforms/FuncBlocCounter && cmake --build .`. When it finishes building, there should be a new file LLVMFuncBlocCounter.so in build/lib. Copy this out to the repository's root.
+
 # Setup
 run `clang -c -emit-llvm program.c` inside this repository, replacing program.c with the c program you want to run this pass on. This will produce a .bc file. program.c is an example program.
 
