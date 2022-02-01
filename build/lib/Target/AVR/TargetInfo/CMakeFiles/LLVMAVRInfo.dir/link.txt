@@ -1,2 +1,0 @@
-/usr/bin/ar Dqc ../../../libLLVMAVRInfo.a  CMakeFiles/LLVMAVRInfo.dir/AVRTargetInfo.cpp.o
-/usr/bin/ranlib -D ../../../libLLVMAVRInfo.a
